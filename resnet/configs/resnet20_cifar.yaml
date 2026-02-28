@@ -1,0 +1,26 @@
+model:
+  in_channels: 3
+  channels_per_layer: [16, 32, 64]
+  n: 3
+  num_classes: 10
+
+optim:
+  name: adam
+  lr: 0.001
+  weight_decay: 0.0001
+
+train:
+  batch_size: 32
+  epochs: 5
+  val_freq: 5
+  loss_fn: cross_entropy
+
+dataset:
+  name: cifar
+  root: cifar
+  mean: [0.4914, 0.4822, 0.4465]
+  std: [0.2023, 0.1994, 0.2010]
+
+runtime: 
+  seed: 42
+  device: mps

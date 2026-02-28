@@ -1,0 +1,12 @@
+# PyTorch
+checkpoints/
+datasets/
+
+# Python
+__pycache__/
+
+# IDE
+.vscode
+
+# OS
+.DS_Store
