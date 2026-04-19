@@ -1,0 +1,37 @@
+device: mps
+seed: 42
+
+dataset:
+  name: AlekseyKorshuk/persona-chat
+
+tokenizer:
+  fname: bpe.json
+  type: bpe # 'bpe' or 'word'
+
+model: 
+  vocab_size: 16000
+  d_model: 512
+  p: 0.1
+  pe: sinusoidal
+  max_len: 512
+  n_encoder: 6
+  n_decoder: 6
+  num_heads: 8
+  d_ff: 2048
+
+optimizer:
+  type: Adam
+  lr: 1.0 # set 1.0 for type=='lambda'
+  weight_decay: 0.0001
+
+  scheduler:
+    type: lambda # constant or lambda
+    warmup_steps: 1000
+
+train:
+  batch_size: 16
+  loss_fn: cross_entropy
+  epochs: 1
+  val_freq:
+  checkpoint:
+    fname: bpe_noam_warmup1000.pth

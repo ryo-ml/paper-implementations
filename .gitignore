@@ -1,6 +1,7 @@
 # PyTorch
 checkpoints/
 datasets/
+tokenizers/
 
 # Python
 __pycache__/
