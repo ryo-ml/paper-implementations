@@ -36,10 +36,12 @@ resnet/
 
 ## Usage
 
+Run all commands from the `resnet/` root directory:
+
 ### Training
 
 ```bash
-python -m resnet.src.main
+python -m src.main
 ```
 
 This runs:
@@ -54,7 +56,7 @@ This runs:
 ### Evaluation
 
 ```bash
-python -m resnet.src.eval
+python -m src.eval
 ```
 
 Evaluation is performed using a saved checkpoint without re-training.
